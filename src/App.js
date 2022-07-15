@@ -5,24 +5,39 @@ import Logo from './components/Logo';
 import styled from 'styled-components';
 import CustomCursor from './CustomCursor';
 import { useMousePosition } from './context/useMousePosition';
+import Parallax from './components/Parallax';
+import Cars from './components/Cars';
 // import ExampleText from './components/ExampleText';
+import { AnimatePresence } from 'framer-motion';
+import { Routes, Route } from 'react-router-dom';
+import Car from './components/Car';
+import { useLocation } from 'react-router-dom';
 
 
 function App() {
   const { textEnter, textLeave } = useMousePosition();
+  const location = useLocation();
   return (
+
     <Contain>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       {/* <ExampleText /> */}
-      <Image>
+      {/* <Image>
       <img src="https://blog.kakaocdn.net/dn/RJOv4/btrHkTSb1Qk/pqfWEPnH4PxmarUoOxOo00/img.jpg" alt="sea" />
-      </Image>
+      </Image> */}
       <Logo />
-      <Example />
-      <BorderWrap >
+      {/* <Example /> */}
+      {/* <BorderWrap >
       <BorderBox />
-      </BorderWrap>
+      </BorderWrap> */}
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
+          <Route exact path="/" element={<Cars />} />
+          <Route exact path="/car/:id" element={<Car />} />
+        </Routes>
+      </AnimatePresence>
     </Contain>
+
   );
 }
 
@@ -30,8 +45,6 @@ export default App;
 
 const Contain = styled.div`
   width:100vw;
-  height:100vh;
-  overflow:hidden;
   position:relative;
 `
 

@@ -10,8 +10,14 @@ body {
   font-family: 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:#fff;
-  cursor: none;
+  background-color:#0b0b0b;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 12px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 2px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 100px 0, 40px 60px, 130px 270px, 70px 100px;
+  overflow-x: hidden;
   
 }
 
@@ -19,3 +25,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+

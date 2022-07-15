@@ -15,9 +15,14 @@ const Contain = styled.div`
     font-weight:800;
     max-width: 1000px;
     margin:0 auto;
-    padding:20px 0;
+    padding:20px 30px;
     display:flex;
+    color:#fff;
     align-items:center;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.2);
+    border-top:none;
+    border-radius:0 0 10px 10px;
 `
 
 const Sea = styled.div`
