@@ -3,7 +3,7 @@ import { MdKeyboardBackspace } from "react-icons/md";
 import { Data } from "./Data";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { carAnimation } from "./Animations";
+import { carAnimation,cardAnimation } from "./Animations";
 
 
 const Car = () => {

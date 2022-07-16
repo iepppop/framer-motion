@@ -12,11 +12,19 @@ import { AnimatePresence } from 'framer-motion';
 import { Routes, Route } from 'react-router-dom';
 import Car from './components/Car';
 import { useLocation } from 'react-router-dom';
+import Home from './pages/Home';
+import Model from './pages/Model';
 
 
 function App() {
   const { textEnter, textLeave } = useMousePosition();
   const location = useLocation();
+
+  const imageDetails = {
+    width: 524,
+    height: 650,
+  };
+
   return (
 
     <Contain>
@@ -30,10 +38,13 @@ function App() {
       {/* <BorderWrap >
       <BorderBox />
       </BorderWrap> */}
+      
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route exact path="/" element={<Cars />} />
-          <Route exact path="/car/:id" element={<Car />} />
+          <Route path="/" element={<Home imageDetails={imageDetails} />} />
+          <Route path='/model/:id' element={<Model imageDetails={imageDetails} />}/>
+          {/* <Route exact path="/" element={<Cars />} />
+          <Route exact path="/car/:id" element={<Car />} /> */}
         </Routes>
       </AnimatePresence>
     </Contain>

@@ -17,7 +17,6 @@ const Contain = styled.div`
     margin:0 auto;
     padding:20px 30px;
     display:flex;
-    color:#fff;
     align-items:center;
     background:rgba(255,255,255,0.1);
     border:1px solid rgba(255,255,255,0.2);

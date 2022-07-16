@@ -14,6 +14,6 @@ export const h3Animation = {
 }
 
 export const carAnimation = {
-    show: { width: ["1000px", "500px"], opacity: [0, 1] },
-    hide: { width: ["500px", "1000px"], opacity: [1, 0] },
+    show: { width: ["1000px", "500px"],  x: [-100, 0], opacity: [0, 1] },
+    hide: { width: ["500px", "1000px"],  x: [0, -100], opacity: [1, 0] },
 };
